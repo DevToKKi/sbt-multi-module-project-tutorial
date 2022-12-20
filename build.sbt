@@ -45,6 +45,6 @@ lazy val core = (project in file("core")).settings(
   libraryDependencies += Constants.rootPackage %% "cats-effect" % "3.3.0",
   crossScalaVersions := List(scala212, scala213)
 )
-lazy val server = (project in file("sever")).dependsOn(core)
+lazy val server = (project in file("server")).dependsOn(core)
 
 lazy val root = (project in file(".")).aggregate(core, server)
